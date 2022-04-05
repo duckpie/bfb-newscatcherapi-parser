@@ -1,8 +1,15 @@
 ENV=local
 
+
+.PHONY: build
+build: 
+	sudo docker-compose -f docker-compose.$(ENV).yml build
+
+
 .PHONY: run
 run: 
-	python3 main.py --env $(ENV)
+	sudo docker-compose -f docker-compose.$(ENV).yml build
+	sudo docker-compose -f docker-compose.$(ENV).yml up
 
 
 .PHONY: tidy

@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  newscatcherapi_parser:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "45321:45321"
+    environment:
+      - ENV=local
+    restart: unless-stopped
+    command: main.py
