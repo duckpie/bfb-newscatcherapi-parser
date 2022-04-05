@@ -1,0 +1,13 @@
+services:
+  server:
+    host: "127.0.0.1"
+    port: 45321
+
+  parser:
+    host: "api.newscatcherapi.com"
+    token: "x_TCZ6AMo3kHTGc62rBuPc8pkLAFkosPP-9aRO8KeiI"
+
+  redis:
+    host: "127.0.0.1"
+    port: 6379
+    db: 2
