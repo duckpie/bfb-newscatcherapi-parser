@@ -7,7 +7,8 @@ class Config_Parser:
         self.__host = parser_params["host"]
         self.__token = parser_params["token"]
         self.__proxies = parser_params["proxies"]
-        self.__interval = parser_params["interval"]
+        self.__parser_interval = parser_params["parser_interval"]
+        self.__storage_interval = parser_params["storage_interval"]
 
     def get_host(self) -> str:
         return self.__host
@@ -15,8 +16,11 @@ class Config_Parser:
     def get_token(self) -> str:
         return self.__token
 
-    def get_interval(self) -> int:
-        return self.__interval
+    def get_parser_interval(self) -> int:
+        return self.__parser_interval
+
+    def get_storage_interval(self) -> int:
+        return self.__storage_interval
 
     def get_proxies(self):
         return self.__proxies
