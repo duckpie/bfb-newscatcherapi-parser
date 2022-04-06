@@ -9,7 +9,8 @@ services:
     proxies:
       - "14.17.106.202:3128"
       - "140.227.61.156:23456"
-    interval: 10
+    parser_interval: 5
+    storage_interval: 15
       
   redis:
     host: "redis"
