@@ -44,9 +44,13 @@ class Config_Redis:
 class Config_Servicers:
     def __init__(self, services_params: dict) -> None:
         self.__parser = Config_Parser(services_params["parser"])
+        self.__redis = Config_Redis(services_params["redis"])
 
     def get_parser(self) -> Config_Parser:
         return self.__parser
+
+    def get_redis(self) -> Config_Redis:
+        return self.__redis
 
 
 class Config:

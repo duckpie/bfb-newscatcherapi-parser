@@ -6,8 +6,11 @@ services:
   parser:
     host: "api.newscatcherapi.com"
     token: "x_TCZ6AMo3kHTGc62rBuPc8pkLAFkosPP-9aRO8KeiI"
+    proxies:
+      - ["14.17.106.202", 3128]
+      - ["140.227.61.156", 23456]
 
   redis:
-    host: "127.0.0.1"
+    host: "redis"
     port: 6379
     db: 2
