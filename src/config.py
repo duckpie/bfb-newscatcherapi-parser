@@ -1,3 +1,4 @@
+from multiprocessing.dummy import Array
 import yaml
 
 
@@ -5,12 +6,20 @@ class Config_Parser:
     def __init__(self, parser_params: dict) -> None:
         self.__host = parser_params["host"]
         self.__token = parser_params["token"]
+        self.__proxies = parser_params["proxies"]
+        self.__interval = parser_params["interval"]
 
     def get_host(self) -> str:
         return self.__host
 
     def get_token(self) -> str:
         return self.__token
+
+    def get_interval(self) -> int:
+        return self.__interval
+
+    def get_proxies(self):
+        return self.__proxies
 
 
 class Config_Server:
